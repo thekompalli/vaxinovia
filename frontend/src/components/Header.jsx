@@ -17,6 +17,7 @@ export const Header = () => {
     { path: '/infrastructure', label: 'Infrastructure' },
     { path: '/innovation', label: 'Innovation & IP' },
     { path: '/strategy', label: 'Vaccine Strategy' },
+    { path: '/investment', label: 'Investment Opportunity' },
     { path: '/staffing', label: 'Staffing & Governance' },
     { path: '/financing', label: 'Financing Plan' },
     { path: '/results', label: 'Expected Results' },
