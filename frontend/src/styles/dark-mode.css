@@ -1,0 +1,242 @@
+/* Dark Mode Styles */
+
+.dark {
+  /* Dark mode color overrides */
+  --vn-deep-indigo: #5B7FD4;
+  --vn-aqua: #4DD4E6;
+  --vn-silver: #6B7280;
+  --vn-mist: #1F2937;
+  --vn-charcoal: #F9FAFB;
+  --vn-success: #4ADE80;
+  --vn-warning: #FBBF24;
+}
+
+/* Dark mode background colors */
+.dark body {
+  background-color: #111827;
+  color: #F9FAFB;
+}
+
+.dark .App {
+  background-color: #111827;
+}
+
+/* Header & Footer */
+.dark header {
+  background-color: #1F2937;
+  border-bottom: 1px solid #374151;
+}
+
+.dark footer {
+  background-color: #1F2937;
+  border-top: 1px solid #374151;
+}
+
+/* Cards */
+.dark .card {
+  background-color: #1F2937;
+  border-color: #374151;
+}
+
+.dark .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Text colors */
+.dark .text-gray-600 {
+  color: #9CA3AF;
+}
+
+.dark .text-gray-700 {
+  color: #D1D5DB;
+}
+
+.dark .text-gray-800 {
+  color: #E5E7EB;
+}
+
+.dark .text-gray-900 {
+  color: #F3F4F6;
+}
+
+/* Backgrounds */
+.dark [style*='background-color: var(--vn-mist)'],
+.dark [style*='backgroundColor: var(--vn-mist)'] {
+  background-color: #1F2937 !important;
+}
+
+.dark [style*='background-color: var(--vn-deep-indigo)'],
+.dark [style*='backgroundColor: var(--vn-deep-indigo)'] {
+  background-color: #1E3A8A !important;
+}
+
+/* Borders */
+.dark .border,
+.dark .border-t,
+.dark .border-b {
+  border-color: #374151;
+}
+
+/* Inputs */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #374151;
+  border-color: #4B5563;
+  color: #F9FAFB;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: var(--vn-aqua);
+  background-color: #1F2937;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #6B7280;
+}
+
+/* Tables */
+.dark .data-table {
+  background-color: #1F2937;
+}
+
+.dark .data-table thead {
+  background-color: #1E3A8A;
+}
+
+.dark .data-table tbody tr:nth-child(even) {
+  background-color: #374151;
+}
+
+.dark .data-table tbody tr:hover {
+  background-color: #4B5563;
+}
+
+.dark .data-table td {
+  border-color: #4B5563;
+}
+
+/* Badges */
+.dark .badge-success {
+  background-color: rgba(74, 222, 128, 0.15);
+  color: #4ADE80;
+}
+
+.dark .badge-primary {
+  background-color: rgba(77, 212, 230, 0.15);
+  color: #4DD4E6;
+}
+
+.dark .badge-warning {
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #FBBF24;
+}
+
+/* Buttons */
+.dark .btn-secondary {
+  background-color: transparent;
+  color: var(--vn-aqua);
+  border-color: var(--vn-aqua);
+}
+
+.dark .btn-secondary:hover {
+  background-color: rgba(77, 212, 230, 0.1);
+}
+
+/* Hover states */
+.dark .hover\:bg-gray-50:hover {
+  background-color: #374151 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #4B5563 !important;
+}
+
+.dark .hover\:bg-gray-200:hover {
+  background-color: #6B7280 !important;
+}
+
+/* KPI Chips */
+.dark .kpi-chip {
+  background-color: #1F2937;
+  border: 1px solid #374151;
+}
+
+/* Timeline */
+.dark .timeline-step::before {
+  background-color: var(--vn-aqua);
+}
+
+.dark .timeline-step::after {
+  background-color: var(--vn-aqua);
+  border-color: #1F2937;
+}
+
+/* Accordion (shadcn) */
+.dark [data-radix-accordion-content] {
+  background-color: #1F2937;
+}
+
+/* Dropdowns */
+.dark .group:hover > div {
+  background-color: #1F2937;
+  border: 1px solid #374151;
+}
+
+/* Scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* Selection */
+.dark ::selection {
+  background-color: rgba(77, 212, 230, 0.3);
+  color: #F9FAFB;
+}
+
+/* Images - slight overlay for better contrast */
+.dark img {
+  opacity: 0.95;
+}
+
+.dark img:hover {
+  opacity: 1;
+}
+
+/* Shadow adjustments */
+.dark .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
