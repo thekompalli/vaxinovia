@@ -107,6 +107,15 @@ export const Investment = () => {
     { year: 'Year 5', activity: 'Licensing & Commercialization', cashFlow: 7.5, description: 'Upfront licensing $5-10M + royalties $1-3M/yr' }
   ];
 
+  // Revenue and Profit Growth Data for Chart
+  const growthData = [
+    { year: 'Year 1', revenue: 0, profit: -2.5 },
+    { year: 'Year 2', revenue: 0.5, profit: -3.0 },
+    { year: 'Year 3', revenue: 1.0, profit: -2.0 },
+    { year: 'Year 4', revenue: 2.5, profit: -0.5 },
+    { year: 'Year 5', revenue: 8.0, profit: 3.5 }
+  ];
+
   const revenueStreams = [
     {
       title: 'Licensing & Milestone Payments',
