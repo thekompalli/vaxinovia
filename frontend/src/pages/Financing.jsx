@@ -234,7 +234,13 @@ export const Financing = () => {
           <p className="text-xl text-gray-600 mb-8">
             Download our comprehensive financial model with detailed cost breakdowns, milestone payments, and risk mitigation strategies.
           </p>
-          <button className="btn-primary inline-flex items-center gap-2">
+          <button 
+            onClick={() => {
+              const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+              window.open(`${BACKEND_URL}/api/downloads/financing`, '_blank');
+            }}
+            className="btn-primary inline-flex items-center gap-2"
+          >
             <Download className="w-5 h-5" />
             Download Financial Package
           </button>
