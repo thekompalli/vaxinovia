@@ -116,6 +116,9 @@ frontend:
       - working: true
         agent: "main"
         comment: "Created ZikaMap component using react-simple-maps. Displays world map with 8 countries highlighted (Brazil, Colombia, Mexico, USA, India, Thailand, Nigeria, South Africa) with color-coded Zika case counts. Includes interactive tooltips, legend, and dark mode support. Successfully integrated into Investment.jsx page."
+      - working: true
+        agent: "main"
+        comment: "Updated color scheme to match VaxiNovia brand identity. Changed from red/orange gradient to indigo-to-aqua gradient using theme colors (#1A365D to #4DD4E6). Map now perfectly complements the website's design system."
 
   - task: "Investment Page Map Integration"
     implemented: true
