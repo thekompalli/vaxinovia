@@ -5,27 +5,49 @@ import { useTheme } from '../context/ThemeContext';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
 
   const isActive = (path) => location.pathname === path;
 
-  const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/experience', label: 'Institutional Experience' },
-    { path: '/infrastructure', label: 'Infrastructure' },
-    { path: '/innovation', label: 'Innovation & IP' },
-    { path: '/strategy', label: 'Vaccine Strategy' },
-    { path: '/investment', label: 'Investment Opportunity' },
-    { path: '/staffing', label: 'Staffing & Governance' },
-    { path: '/financing', label: 'Financing Plan' },
-    { path: '/results', label: 'Expected Results' },
-    { path: '/projects', label: 'Projects & Portfolio' },
-    { path: '/publications', label: 'Publications & Patents' },
-    { path: '/partners', label: 'Partners' },
-    { path: '/contact', label: 'Contact' }
-  ];
+  const navStructure = {
+    main: [
+      { path: '/', label: 'Home' },
+      { path: '/about', label: 'About' }
+    ],
+    science: {
+      label: 'Science & Technology',
+      items: [
+        { path: '/experience', label: 'Institutional Experience', desc: '30+ years in vaccine development' },
+        { path: '/infrastructure', label: 'Infrastructure', desc: 'ISO 9001:2015 certified facility' },
+        { path: '/innovation', label: 'Innovation & IP', desc: '28 active patents, ASIP® platform' },
+        { path: '/strategy', label: 'Vaccine Strategy', desc: 'Development process & QA/RA' }
+      ]
+    },
+    programs: {
+      label: 'Programs',
+      items: [
+        { path: '/projects', label: 'Projects Portfolio', desc: 'ZIKAvia™, Rvexia®, NeoMenA®' },
+        { path: '/results', label: 'Expected Results', desc: 'Clinical outcomes & impact' },
+        { path: '/publications', label: 'Publications & Patents', desc: 'Scientific publications & IP' }
+      ]
+    },
+    investors: {
+      label: 'Investors',
+      items: [
+        { path: '/investment', label: 'Investment Opportunity', desc: 'USD 9M co-funding program' },
+        { path: '/financing', label: 'Financing Plan', desc: '6-year financial strategy' },
+        { path: '/staffing', label: 'Team & Governance', desc: 'Leadership & organizational structure' }
+      ]
+    },
+    partners: [
+      { path: '/partners', label: 'Partners' }
+    ],
+    contact: [
+      { path: '/contact', label: 'Contact' }
+    ]
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
