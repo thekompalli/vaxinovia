@@ -82,17 +82,25 @@ export const Footer = () => {
             </div>
             
             <h4 className="font-semibold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>Newsletter</h4>
-            <div className="flex gap-2">
+            <form 
+              action="https://formspree.io/f/mblpnaaa" 
+              method="POST"
+              className="flex gap-2"
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Email address"
+                required
                 className="flex-1 px-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-2"
                 style={{'--tw-ring-color': 'var(--vn-aqua)'}}
               />
-              <button className="px-4 py-2 text-sm font-medium text-white rounded-md" style={{backgroundColor: 'var(--vn-aqua)'}}>
+              <input type="hidden" name="_subject" value="VaxiNovia Newsletter Subscription" />
+              <input type="hidden" name="formType" value="newsletter" />
+              <button type="submit" className="px-4 py-2 text-sm font-medium text-white rounded-md" style={{backgroundColor: 'var(--vn-aqua)'}}>
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
 
