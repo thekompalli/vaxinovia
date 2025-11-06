@@ -42,6 +42,7 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4" style={{color: 'var(--vn-deep-indigo)'}}>Research & Development</h3>
             <ul className="space-y-2">
+              <li><Link to="/about" className="text-sm text-gray-600 hover:text-gray-900">About Us</Link></li>
               <li><Link to="/experience" className="text-sm text-gray-600 hover:text-gray-900">Institutional Experience</Link></li>
               <li><Link to="/infrastructure" className="text-sm text-gray-600 hover:text-gray-900">Infrastructure</Link></li>
               <li><Link to="/innovation" className="text-sm text-gray-600 hover:text-gray-900">Innovation & IP</Link></li>
