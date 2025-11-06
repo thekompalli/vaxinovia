@@ -5,7 +5,6 @@ import { useTheme } from '../context/ThemeContext';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
 
