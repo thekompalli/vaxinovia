@@ -40,7 +40,7 @@ export const Header = () => {
             </div>
             <div>
               <div className="text-xl font-bold" style={{color: 'var(--vn-deep-indigo)'}}>VaxiNovia</div>
-              <div className="text-xs" style={{color: 'var(--vn-aqua)'}}>S.A.</div>
+              <div className="text-xs" style={{color: 'var(--vn-aqua)'}}>Engineering Immunity. Empowering Life.</div>
             </div>
           </Link>
 
