@@ -1,0 +1,240 @@
+/* VaxiNovia Brand Styles */
+:root {
+  /* Brand Colors */
+  --vn-deep-indigo: #1E2A5A;
+  --vn-aqua: #29B7C5;
+  --vn-silver: #C9D2DF;
+  --vn-mist: #EEF3F7;
+  --vn-charcoal: #101216;
+  --vn-success: #30A46C;
+  --vn-warning: #F0A202;
+}
+
+/* Typography */
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+}
+
+/* Smooth transitions */
+button, a, .card, .tab-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover, a:hover {
+  transform: translateY(-2px);
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--vn-aqua);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #1da3b0;
+  box-shadow: 0 8px 20px rgba(41, 183, 197, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--vn-deep-indigo);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 2px solid var(--vn-deep-indigo);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--vn-deep-indigo);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--vn-mist);
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Protein Network Animation */
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.protein-network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image: 
+    radial-gradient(circle at 20% 30%, var(--vn-aqua) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, var(--vn-aqua) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, var(--vn-aqua) 1px, transparent 1px);
+  background-size: 100px 100px;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Stats Counter */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-item {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* Table Styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table thead {
+  background-color: var(--vn-deep-indigo);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table th,
+.data-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--vn-mist);
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--vn-mist);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: rgba(48, 164, 108, 0.1);
+  color: var(--vn-success);
+}
+
+.badge-primary {
+  background-color: rgba(41, 183, 197, 0.1);
+  color: var(--vn-aqua);
+}
+
+.badge-warning {
+  background-color: rgba(240, 162, 2, 0.1);
+  color: var(--vn-warning);
+}
+
+/* Section Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--vn-silver), transparent);
+  margin: 80px 0;
+}
+
+/* Timeline */
+.timeline-step {
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--vn-aqua);
+}
+
+.timeline-step::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--vn-aqua);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--vn-aqua);
+}
+
+.timeline-step:last-child::before {
+  display: none;
+}
+
+/* KPI Chip */
+.kpi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+}
