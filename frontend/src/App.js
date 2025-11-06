@@ -30,6 +30,7 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <BrowserRouter>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
