@@ -99,13 +99,6 @@ export const Investment = () => {
     }
   };
 
-  const useOfFunds = [
-    { category: 'Preclinical GLP Studies & Assay Validation', amount: 2.0, percentage: 22 },
-    { category: 'GMP Process Development & Clinical-Lot Manufacture', amount: 3.0, percentage: 33 },
-    { category: 'Phase 1 & Phase 2 Clinical Trials', amount: 3.5, percentage: 39 },
-    { category: 'Regulatory, QA, PM & Contingency', amount: 0.5, percentage: 6 }
-  ];
-
   const financialProjections = [
     { year: 'Year 0-2', activity: 'R&D & CMC Spend', cashFlow: -6.5, description: 'GLP studies, process development, Phase 1 initiation' },
     { year: 'Year 3', activity: 'Phase 1 Completion', cashFlow: -1.0, description: 'Safety & dose-finding completed' },
