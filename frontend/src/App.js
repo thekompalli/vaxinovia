@@ -23,6 +23,7 @@ import { Projects } from './pages/Projects';
 import { Publications } from './pages/Publications';
 import { Partners } from './pages/Partners';
 import { Contact } from './pages/Contact';
+import { Investment } from './pages/Investment';
 import { Legal } from './pages/Legal';
 
 function App() {
