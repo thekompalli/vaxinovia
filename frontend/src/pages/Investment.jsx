@@ -5,6 +5,72 @@ import ZikaMap from '../components/ZikaMap';
 import { toast } from '../components/ui/sonner';
 
 export const Investment = () => {
+  const [liked, setLiked] = useState(false);
+  const [showCommentForm, setShowCommentForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    comment: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleLike = async () => {
+    if (!liked) {
+      setLiked(true);
+      toast.success('Thank you for your interest!');
+      
+      // Send like notification to Formspree
+      try {
+        await fetch('https://formspree.io/f/mblpnaaa', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            type: 'Investment Page Like',
+            message: 'A visitor liked the Investment Opportunity page',
+            timestamp: new Date().toISOString()
+          }),
+        });
+      } catch (error) {
+        console.error('Error sending like notification:', error);
+      }
+    }
+  };
+
+  const handleCommentSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mblpnaaa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'Investment Page Comment',
+          name: formData.name,
+          email: formData.email,
+          comment: formData.comment,
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Thank you for your feedback!');
+        setFormData({ name: '', email: '', comment: '' });
+        setShowCommentForm(false);
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      toast.error('Failed to submit. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const useOfFunds = [
     { category: 'Preclinical GLP Studies & Assay Validation', amount: 2.0, percentage: 22 },
     { category: 'GMP Process Development & Clinical-Lot Manufacture', amount: 3.0, percentage: 33 },
