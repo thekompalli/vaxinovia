@@ -30,13 +30,13 @@ const ZikaMap = () => {
     return acc;
   }, {});
 
-  // Color scale based on cases
+  // Color scale based on cases - more realistic outbreak data
   const getColor = (cases) => {
-    if (cases >= 15000) return '#8B0000'; // Dark red
-    if (cases >= 10000) return '#DC143C'; // Crimson
-    if (cases >= 7000) return '#FF6347';  // Tomato
+    if (cases >= 100000) return '#8B0000'; // Dark red - highest
+    if (cases >= 50000) return '#DC143C'; // Crimson
+    if (cases >= 10000) return '#FF6347';  // Tomato
     if (cases >= 5000) return '#FF8C00';  // Dark orange
-    if (cases >= 3000) return '#FFA500';  // Orange
+    if (cases >= 2000) return '#FFA500';  // Orange
     return '#FFD700'; // Gold
   };
 
