@@ -10,6 +10,7 @@ export const Header = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Us' },
     { path: '/experience', label: 'Institutional Experience' },
     { path: '/infrastructure', label: 'Infrastructure' },
     { path: '/innovation', label: 'Innovation & IP' },
