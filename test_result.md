@@ -158,6 +158,20 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "Investment Page Engagement Section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Investment.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added interactive engagement section at bottom of Investment page with 'Like' and 'Comment' functionality. Both actions send data to the same Formspree form (mblpnaaa) used by contact forms. Like button shows animated state change with gradient background and toast notification. Comment form includes name, email, and comment fields with proper validation and styling."
+
 agent_communication:
   - agent: "main"
-    message: "Successfully implemented interactive world map for Zika virus cases on Investment Opportunity page. Map shows 8 countries with color-coded case counts (Brazil: 215K, Colombia: 91K, Mexico: 55K, USA: 5.9K, India: 3K, Thailand: 2K, Nigeria: 1.5K, South Africa: 500). Features include hover tooltips, interactive legend, and full dark mode support. Component is fully functional and visually polished."
+    message: "Successfully implemented interactive world map for Zika virus cases on Investment Opportunity page. Map shows 8 countries with color-coded case counts (Brazil: 215K, Colombia: 91K, Mexico: 55K, USA: 5.9K, India: 3K, Thailand: 2K, Nigeria: 1.5K, South Africa: 500). Features include hover tooltips, interactive legend, and full dark mode support. Component is fully functional and visually polished. Updated color scheme to match VaxiNovia brand (indigo-to-aqua gradient)."
+  - agent: "main"
+    message: "Added engagement section at bottom of Investment page with Like and Comment features. Users can express interest via thumbs-up button or leave detailed comments. All submissions sent to Formspree (form ID: mblpnaaa). Like button shows animated state with gradient background. Comment form includes validation and matching brand styling. Both features working correctly with toast notifications."
