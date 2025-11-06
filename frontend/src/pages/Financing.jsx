@@ -2,6 +2,13 @@ import React from 'react';
 import { DollarSign, TrendingUp, PieChart, Download } from 'lucide-react';
 
 export const Financing = () => {
+  const useOfFunds = [
+    { category: 'Preclinical GLP Studies & Assay Validation', amount: 2.0, percentage: 22 },
+    { category: 'GMP Process Development & Clinical-Lot Manufacture', amount: 3.0, percentage: 33 },
+    { category: 'Phase 1 & Phase 2 Clinical Trials', amount: 3.5, percentage: 39 },
+    { category: 'Regulatory, QA, PM & Contingency', amount: 0.5, percentage: 6 }
+  ];
+
   const financingData = [
     {
       year: 1,
