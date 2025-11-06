@@ -139,27 +139,27 @@ const ZikaMap = () => {
           Reported Zika Cases (2015-2016):
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#FFD700'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#4DD4E6'}}></div>
           <span className="text-xs text-gray-600">&lt;2,000</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#FFA500'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#29B7C5'}}></div>
           <span className="text-xs text-gray-600">2,000 - 5,000</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#FF8C00'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#4D8FBF'}}></div>
           <span className="text-xs text-gray-600">5,000 - 10,000</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#FF6347'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#3B6EA5'}}></div>
           <span className="text-xs text-gray-600">10,000 - 50,000</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#DC143C'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#2B4C7E'}}></div>
           <span className="text-xs text-gray-600">50,000 - 100,000</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-4 rounded" style={{backgroundColor: '#8B0000'}}></div>
+          <div className="w-6 h-4 rounded" style={{backgroundColor: '#1A365D'}}></div>
           <span className="text-xs text-gray-600">100,000+</span>
         </div>
       </div>
