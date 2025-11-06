@@ -14,14 +14,14 @@ const ZikaMap = () => {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   const zikaData = [
-    { country: "Brazil", iso: "BRA", cases: 215000, coords: [-47.9292, -15.7942] },
-    { country: "Colombia", iso: "COL", cases: 91000, coords: [-74.2973, 4.5709] },
-    { country: "Mexico", iso: "MEX", cases: 55000, coords: [-102.5528, 23.6345] },
-    { country: "USA", iso: "USA", cases: 5900, coords: [-95.7129, 37.0902] },
-    { country: "India", iso: "IND", cases: 3000, coords: [78.9629, 20.5937] },
-    { country: "Thailand", iso: "THA", cases: 2000, coords: [100.9925, 15.8700] },
-    { country: "Nigeria", iso: "NGA", cases: 1500, coords: [8.6753, 9.0820] },
-    { country: "South Africa", iso: "ZAF", cases: 500, coords: [22.9375, -30.5595] }
+    { country: "Brazil", id: "076", cases: 215000, coords: [-47.9292, -15.7942] },
+    { country: "Colombia", id: "170", cases: 91000, coords: [-74.2973, 4.5709] },
+    { country: "Mexico", id: "484", cases: 55000, coords: [-102.5528, 23.6345] },
+    { country: "USA", id: "840", cases: 5900, coords: [-95.7129, 37.0902] },
+    { country: "India", id: "356", cases: 3000, coords: [78.9629, 20.5937] },
+    { country: "Thailand", id: "764", cases: 2000, coords: [100.9925, 15.8700] },
+    { country: "Nigeria", id: "566", cases: 1500, coords: [8.6753, 9.0820] },
+    { country: "South Africa", id: "710", cases: 500, coords: [22.9375, -30.5595] }
   ];
 
   // Create a map of ISO codes to case data
