@@ -1,0 +1,98 @@
+<analysis>
+The previous AI engineer initiated a full-stack React/FastAPI/MongoDB application for VaxiNovia, a biotech company. Starting from a basic template, the engineer built a comprehensive 13-page static frontend, integrating Shadcn UI and Tailwind CSS for a premium design. Following user feedback, backend functionality for contact forms and PDF generation was added, followed by team photo updates, a robust dark mode implementation, image sizing consistency, and Formspree integration. A major update involved incorporating detailed pitch deck content across new and existing pages, including an Investment Opportunity page. The engineer then redesigned the navigation to a modern mega-menu structure and fixed associated hover issues. The current task involves integrating an interactive world map with Zika virus data using  on the Investment Opportunity page.
+</analysis>
+
+<product_requirements>
+The goal is to build a conversion-optimized, 0,000+ agency-quality landing page for VaxiNovia, a biotech company focused on recombinant vaccines. The application is a full-stack React (frontend), FastAPI (backend), and MongoDB (database) app. Key design principles include conversion optimization, layered design, distinct CTA sections, stylish accordions, glass-morphism effects, emotional impact, compelling messaging, and intuitive navigation. The website needs to support English only and be static initially.
+Features built include: 13 static frontend pages (Home, Institutional Experience, Infrastructure, Innovation, Vaccine Strategy, Staffing, Financing, Results, Projects, Publications, Partners, Contact, Legal), professional imagery, a header and footer. Full-stack functionality was then added for contact forms and PDF downloads. An About Us page with team profiles and placeholder images was requested, later updated with actual images and consistent sizing. A site-wide dark mode toggle was implemented. Formspree was integrated for contact and newsletter forms. Navigation improvements included scroll-to-top on page changes and limiting partners to 5. Subsequently, content from a 12-slide pitch deck was integrated, including a new Investment Opportunity page. The navigation was then redesigned into a modern mega-menu structure with dropdowns, and hover functionality was fixed. The user is currently requesting an interactive world map with Zika cases on the Investment Opportunity page.
+</product_requirements>
+
+<key_technical_concepts>
+- React: Frontend framework for UI development.
+- FastAPI: Backend framework for API development.
+- MongoDB: Database for data storage.
+- Shadcn UI & Tailwind CSS: Frontend component library and utility-first CSS framework for styling.
+- : For client-side routing.
+- : For HTTP requests.
+-  & : For MongoDB ODM and data validation in FastAPI.
+-  & : Backend libraries for image processing and PDF generation.
+- Formspree: Third-party service for handling form submissions.
+- : Library for rendering interactive SVG maps.
+</key_technical_concepts>
+
+<code_architecture>
+The application follows a standard full-stack architecture with a React frontend, FastAPI backend, and MongoDB database.
+
+**Directory Structure:**
+
+
+-   : The main React application entry point. It defines  and  for all pages. It was updated multiple times to include new routes, wrap the app with , and include  and .
+-   : Contains all individual page components (Home, About, Contact, Investment, etc.). Initially, 13 pages were created, then  and  were added. These pages contain the content, styling, and logic for their respective sections.
+-   : Manages the site's primary navigation. This file has undergone significant changes for navigation redesign, dark mode toggle, and including new page links.
+-   : The site's footer, updated to include new links (like About) and integrated with Formspree for newsletter subscriptions.
+-   : Custom CSS for site-wide styling, including brand colors, typography, and animations.
+-   : New CSS file introduced for dark mode specific styles.
+-   : Manages the dark mode state and provides a context for the theme across the application.
+-   : A component created to ensure pages scroll to the top on navigation changes.
+-   : The main FastAPI application. It was initially set up with a  and  endpoint. It has since been updated to include  and  routers.
+-   : Defines Pydantic models for data validation, specifically for  and contact forms.
+-   : Module for generating PDF documents.
+-   : Backend routes for handling contact form submissions.
+-   : Backend routes for handling PDF download requests.
+</code_architecture>
+
+<pending_tasks>
+- Add exact company definition from Slide 2 to the About page.
+- Add vision statement from Slide 3 to the About page.
+- Add human impact story (pregnant woman narrative) to Results/Home Page.
+- Add CEO direct contact info to the Contact Page.
+- Potentially create a dedicated competitive advantages section.
+- Complete the implementation of the interactive world map component for Zika cases.
+</pending_tasks>
+
+<current_work>
+Immediately before this summary request, the AI engineer was tasked with adding an interactive world map to the Investment Opportunity page, specifically within the Target Customer section. This map needs to highlight certain countries (Brazil, Mexico, Colombia, USA, India, Thailand, Nigeria, South Africa) and display Zika virus case counts for each, with distinct coloring.
+
+The AI engineer's approach is to use the  library.
+The following actions have been taken:
+1.  **Dependency Installation**: The  library was added to the frontend  using yarn add v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 11 new dependencies.
+info Direct dependencies
+└─ react-simple-maps@3.0.0
+info All dependencies
+├─ commander@2.20.3
+├─ d3-array@2.12.1
+├─ d3-drag@2.0.0
+├─ d3-ease@2.0.0
+├─ d3-geo@2.0.2
+├─ d3-timer@2.0.0
+├─ d3-transition@2.0.0
+├─ d3-zoom@2.0.0
+├─ internmap@1.0.1
+├─ react-simple-maps@3.0.0
+└─ topojson-client@3.1.0
+Done in 2.63s..
+    yarn add v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved 1 new dependency.
+info Direct dependencies
+└─ react-simple-maps@3.0.0
+info All dependencies
+└─ react-simple-maps@3.0.0
+Done in 0.42s.
+2.  **Component Creation**: The engineer has started the process of creating a new React component named  within . This component will encapsulate the logic and rendering of the world map.
+
+The current state is that  has been installed, and the AI engineer is in the process of defining and building the  component. The next step would be to write the actual code for this component, integrate it into the  page, and then verify its functionality and visual presentation.
+</current_work>
+
+<optional_next_step>
+Continue creating the  component, integrate it into , and then verify its functionality.
+</optional_next_step>
