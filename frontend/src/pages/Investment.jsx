@@ -328,6 +328,78 @@ export const Investment = () => {
               <strong>Note:</strong> Projections are conservative, based on modest licensing deal assumptions and initial royalty ramp. Heavy investment during R&D years (0-3) transitions to licensing monetization post-Phase 2. Detailed line-item assumptions available in financial appendix.
             </p>
           </div>
+
+          {/* Revenue & Profit Growth Chart */}
+          <div className="card mt-8">
+            <h3 className="text-2xl font-bold text-center mb-6" style={{color: 'var(--vn-deep-indigo)'}}>
+              Projected Revenue & Profit Growth
+            </h3>
+            <ResponsiveContainer width="100%" height={400}>
+              <LineChart
+                data={growthData}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                <XAxis 
+                  dataKey="year" 
+                  stroke="#6B7280"
+                  style={{ fontSize: '14px' }}
+                />
+                <YAxis 
+                  stroke="#6B7280"
+                  style={{ fontSize: '14px' }}
+                  label={{ value: 'USD Million', angle: -90, position: 'insideLeft', style: { fill: '#6B7280' } }}
+                />
+                <Tooltip 
+                  contentStyle={{ 
+                    backgroundColor: 'white', 
+                    border: '1px solid #E5E7EB',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                  }}
+                  formatter={(value) => `$${value.toFixed(1)}M`}
+                />
+                <Legend 
+                  wrapperStyle={{ paddingTop: '20px' }}
+                  iconType="line"
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="revenue" 
+                  stroke="#29B7C5" 
+                  strokeWidth={3}
+                  name="Revenue"
+                  dot={{ fill: '#29B7C5', r: 5 }}
+                  activeDot={{ r: 7 }}
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="profit" 
+                  stroke="#2B4C7E" 
+                  strokeWidth={3}
+                  name="Profit"
+                  dot={{ fill: '#2B4C7E', r: 5 }}
+                  activeDot={{ r: 7 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+            <div className="mt-6 grid md:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3 p-4 rounded-lg" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)'}}>
+                <div className="w-4 h-4 rounded-full" style={{backgroundColor: '#29B7C5'}}></div>
+                <div>
+                  <div className="font-semibold" style={{color: 'var(--vn-deep-indigo)'}}>Revenue Growth</div>
+                  <div className="text-sm text-gray-600">Platform services ramping to licensing revenue</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4 rounded-lg" style={{backgroundColor: 'rgba(43, 76, 126, 0.1)'}}>
+                <div className="w-4 h-4 rounded-full" style={{backgroundColor: '#2B4C7E'}}></div>
+                <div>
+                  <div className="font-semibold" style={{color: 'var(--vn-deep-indigo)'}}>Profit Trajectory</div>
+                  <div className="text-sm text-gray-600">Break-even by Year 5 with licensing deals</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
