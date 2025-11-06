@@ -81,8 +81,19 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* Theme Toggle & CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? (
+                <Sun className="w-5 h-5" style={{color: 'var(--vn-aqua)'}} />
+              ) : (
+                <Moon className="w-5 h-5" style={{color: 'var(--vn-deep-indigo)'}} />
+              )}
+            </button>
             <Link to="/contact" className="btn-primary">
               Request Dossier
             </Link>
