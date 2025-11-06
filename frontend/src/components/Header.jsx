@@ -69,14 +69,13 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
-            {navLinks.slice(0, 6).map((link) => (
+            {/* Main Links */}
+            {navStructure.main.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
-                  isActive(link.path)
-                    ? 'text-white'
-                    : 'hover:bg-gray-50'
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  isActive(link.path) ? 'text-white' : 'hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
                 style={isActive(link.path) ? {backgroundColor: 'var(--vn-aqua)'} : {color: 'var(--vn-deep-indigo)'}}
               >
@@ -84,24 +83,94 @@ export const Header = () => {
               </Link>
             ))}
             
-            {/* More Dropdown */}
-            <div className="relative group">
-              <button className="px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50" style={{color: 'var(--vn-deep-indigo)'}}>
-                More <ChevronDown className="w-4 h-4" />
+            {/* Science & Technology Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown('science')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
+                {navStructure.science.label} <ChevronDown className="w-4 h-4" />
               </button>
-              <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {navLinks.slice(6).map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="block px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg"
-                    style={{color: 'var(--vn-deep-indigo)'}}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+              {activeDropdown === 'science' && (
+                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+                  {navStructure.science.items.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-sm mb-1" style={{color: 'var(--vn-deep-indigo)'}}>{item.label}</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</div>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+
+            {/* Programs Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown('programs')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
+                {navStructure.programs.label} <ChevronDown className="w-4 h-4" />
+              </button>
+              {activeDropdown === 'programs' && (
+                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+                  {navStructure.programs.items.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-sm mb-1" style={{color: 'var(--vn-deep-indigo)'}}>{item.label}</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Investors Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown('investors')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
+                {navStructure.investors.label} <ChevronDown className="w-4 h-4" />
+              </button>
+              {activeDropdown === 'investors' && (
+                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+                  {navStructure.investors.items.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="block px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-sm mb-1" style={{color: 'var(--vn-deep-indigo)'}}>{item.label}</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Partners & Contact */}
+            {navStructure.partners.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  isActive(link.path) ? 'text-white' : 'hover:bg-gray-50 dark:hover:bg-gray-700'
+                }`}
+                style={isActive(link.path) ? {backgroundColor: 'var(--vn-aqua)'} : {color: 'var(--vn-deep-indigo)'}}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Theme Toggle & CTA Button */}
