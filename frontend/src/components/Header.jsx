@@ -203,13 +203,14 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t">
-            {navLinks.map((link) => (
+          <div className="lg:hidden py-4 border-t max-h-[80vh] overflow-y-auto">
+            {/* Main Links */}
+            {navStructure.main.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-md text-sm font-medium ${
+                className={`block px-4 py-3 rounded-md text-sm font-medium mx-4 mb-2 ${
                   isActive(link.path) ? 'text-white' : ''
                 }`}
                 style={isActive(link.path) ? {backgroundColor: 'var(--vn-aqua)'} : {color: 'var(--vn-deep-indigo)'}}
@@ -217,11 +218,76 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <div className="flex items-center justify-between mx-4 mt-4 mb-2">
+
+            {/* Science Section */}
+            <div className="mx-4 mb-3">
+              <div className="text-xs font-semibold text-gray-400 uppercase mb-2 px-2">Science & Technology</div>
+              {navStructure.science.items.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md"
+                  style={{color: 'var(--vn-deep-indigo)'}}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Programs Section */}
+            <div className="mx-4 mb-3">
+              <div className="text-xs font-semibold text-gray-400 uppercase mb-2 px-2">Programs</div>
+              {navStructure.programs.items.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md"
+                  style={{color: 'var(--vn-deep-indigo)'}}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Investors Section */}
+            <div className="mx-4 mb-3">
+              <div className="text-xs font-semibold text-gray-400 uppercase mb-2 px-2">Investors</div>
+              {navStructure.investors.items.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md"
+                  style={{color: 'var(--vn-deep-indigo)'}}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Partners & Contact */}
+            {navStructure.partners.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-3 rounded-md text-sm font-medium mx-4 mb-2 ${
+                  isActive(link.path) ? 'text-white' : ''
+                }`}
+                style={isActive(link.path) ? {backgroundColor: 'var(--vn-aqua)'} : {color: 'var(--vn-deep-indigo)'}}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* Dark Mode Toggle */}
+            <div className="flex items-center justify-between mx-4 mt-4 mb-2 px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded-md">
               <span className="text-sm font-medium" style={{color: 'var(--vn-deep-indigo)'}}>Dark Mode</span>
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                 aria-label="Toggle dark mode"
               >
                 {isDark ? (
@@ -231,9 +297,11 @@ export const Header = () => {
                 )}
               </button>
             </div>
+
+            {/* CTA Button */}
             <Link
               to="/contact"
-              className="block mt-2 mx-4 text-center btn-primary"
+              className="block mt-4 mx-4 text-center btn-primary"
               onClick={() => setIsOpen(false)}
             >
               Request Dossier
