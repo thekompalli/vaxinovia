@@ -24,9 +24,9 @@ const ZikaMap = () => {
     { country: "South Africa", id: "710", cases: 500, coords: [22.9375, -30.5595] }
   ];
 
-  // Create a map of ISO codes to case data
+  // Create a map of country IDs to case data
   const zikaMap = zikaData.reduce((acc, item) => {
-    acc[item.iso] = item;
+    acc[item.id] = item;
     return acc;
   }, {});
 
