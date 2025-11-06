@@ -66,9 +66,9 @@ const ZikaMap = () => {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={countryData ? getColor(countryData.cases) : '#E5E7EB'}
-                    stroke="#FFFFFF"
-                    strokeWidth={0.5}
+                    fill={countryData ? getColor(countryData.cases) : 'var(--map-country-fill, #E5E7EB)'}
+                    stroke={countryData ? '#991b1b' : 'var(--map-stroke, #D1D5DB)'}
+                    strokeWidth={countryData ? 1.5 : 0.5}
                     style={{
                       default: { outline: 'none' },
                       hover: {
