@@ -182,3 +182,7 @@ agent_communication:
     message: "Enhanced like functionality with localStorage-based counter. Shows '1 person interested' or 'X people interested' that persists across page reloads. Each like sends data to Formspree with timestamp and total count. Tested successfully - confirmed both likes and comments are being sent to Formspree endpoint."
   - agent: "main"
     message: "Completed three major content improvements: (1) Added compelling Vision section to About page with gradient background and 2030 goals; (2) Added 'Why Us?' and 'Track Record' sections to Innovation page showcasing 4 key differentiators and 4 successful vaccine programs; (3) Moved 'Use of Funds: USD 9M Total' section from Investment page to Financing page for better information architecture."
+  - agent: "main"
+    message: "Fixed incorrect data on About page: Changed €12M Annual Funding to USD 9M Total Program Funding (3 locations), and changed '50+ countries' to '8 Countries - Target markets for ZIKAvia™' in Vision section."
+  - agent: "main"
+    message: "Added interactive Revenue & Profit Growth chart to Investment page using Recharts library. Chart shows 5-year financial trajectory with two lines: Revenue (aqua) growing from $0M to $8M, and Profit (indigo) recovering from -$2.5M to +$3.5M. Includes interactive tooltips, legend, grid, and description boxes explaining revenue ramp and break-even timeline. Chart positioned below Financial Projections table."
