@@ -81,8 +81,57 @@ export const Financing = () => {
         </div>
       </section>
 
-      {/* Funding Overview */}
+      {/* Use of Funds */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Use of Funds: USD 9M Total</h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-4">
+              {useOfFunds.map((item, index) => (
+                <div key={index} className="card">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-semibold flex-1" style={{color: 'var(--vn-deep-indigo)'}}>{item.category}</h3>
+                    <span className="text-xl font-bold ml-4" style={{color: 'var(--vn-aqua)'}}>USD {item.amount}M</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div 
+                      className="h-3 rounded-full" 
+                      style={{backgroundColor: 'var(--vn-aqua)', width: `${item.percentage}%`}}
+                    ></div>
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">{item.percentage}% of total budget</div>
+                </div>
+              ))}
+            </div>
+            <div className="card" style={{backgroundColor: 'var(--vn-deep-indigo)', color: 'white'}}>
+              <h3 className="text-2xl font-bold mb-6">Funding Structure</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="opacity-90">EA-RIVAC Co-Funding:</span>
+                  <span className="text-2xl font-bold" style={{color: 'var(--vn-aqua)'}}>USD 3M</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="opacity-90">VaxiNovia Investment:</span>
+                  <span className="text-2xl font-bold" style={{color: 'var(--vn-aqua)'}}>USD 3M</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="opacity-90">Strategic Partner (Sanofi):</span>
+                  <span className="text-2xl font-bold" style={{color: 'var(--vn-aqua)'}}>USD 3M</span>
+                </div>
+                <div className="border-t border-white border-opacity-20 pt-4 mt-4">
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-lg">Total Program:</span>
+                    <span className="text-3xl font-bold" style={{color: 'var(--vn-aqua)'}}>USD 9M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Funding Overview */}
+      <section className="py-20" style={{backgroundColor: 'var(--vn-mist)'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="card text-center">
