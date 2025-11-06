@@ -72,9 +72,10 @@ const ZikaMap = () => {
                     style={{
                       default: { outline: 'none' },
                       hover: {
-                        fill: countryData ? getColor(countryData.cases) : '#D1D5DB',
+                        fill: countryData ? getColor(countryData.cases) : 'var(--map-hover, #D1D5DB)',
                         outline: 'none',
-                        opacity: 0.8
+                        cursor: countryData ? 'pointer' : 'default',
+                        filter: countryData ? 'brightness(1.1)' : 'none'
                       },
                       pressed: { outline: 'none' }
                     }}
