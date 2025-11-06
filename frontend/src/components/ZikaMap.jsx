@@ -97,8 +97,22 @@ const ZikaMap = () => {
           
           {/* Markers for emphasis */}
           {zikaData.map((item) => (
-            <Marker key={item.iso} coordinates={item.coords}>
-              <circle r={4} fill="#29B7C5" stroke="#fff" strokeWidth={1} opacity={0.8} />
+            <Marker key={item.id} coordinates={item.coords}>
+              <circle 
+                r={4} 
+                fill={getColor(item.cases)} 
+                stroke="#fff" 
+                strokeWidth={1.5} 
+                style={{ cursor: 'pointer' }}
+                onMouseEnter={(e) => {
+                  setTooltipContent(`${item.country}: ${item.cases.toLocaleString()} cases`);
+                  handleMouseMove(e);
+                }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={() => {
+                  setTooltipContent('');
+                }}
+              />
             </Marker>
           ))}
         </ZoomableGroup>
