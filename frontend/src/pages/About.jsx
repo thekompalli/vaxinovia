@@ -51,7 +51,7 @@ export const About = () => {
       fte: '0.25 FTE',
       experience: 'Financial strategy and fundraising expert',
       responsibilities: 'Budget oversight, resource allocation, fundraising liaison, and financial reporting to funders.',
-      achievement: 'Secured €12M annual funding from diverse sources',
+      achievement: 'Secured USD 9M program funding from EA-RIVAC, VaxiNovia, and Sanofi',
       image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/oo26mnbo_Krishna.jpg'
     },
     {
