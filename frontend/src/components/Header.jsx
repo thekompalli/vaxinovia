@@ -174,7 +174,19 @@ export const Header = () => {
           </div>
 
           {/* Theme Toggle & CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
+            {navStructure.contact.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  isActive(link.path) ? 'text-white' : 'hover:bg-gray-50 dark:hover:bg-gray-700'
+                }`}
+                style={isActive(link.path) ? {backgroundColor: 'var(--vn-aqua)'} : {color: 'var(--vn-deep-indigo)'}}
+              >
+                {link.label}
+              </Link>
+            ))}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
@@ -186,8 +198,8 @@ export const Header = () => {
                 <Moon className="w-5 h-5" style={{color: 'var(--vn-deep-indigo)'}} />
               )}
             </button>
-            <Link to="/contact" className="btn-primary">
-              Request Dossier
+            <Link to="/investment" className="btn-primary text-sm px-5 py-2.5">
+              Investment Opportunity
             </Link>
           </div>
 
