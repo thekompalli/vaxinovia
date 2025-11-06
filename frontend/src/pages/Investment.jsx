@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign, Target, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import ZikaMap from '../components/ZikaMap';
 
 export const Investment = () => {
   const useOfFunds = [
