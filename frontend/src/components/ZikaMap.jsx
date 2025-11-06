@@ -121,32 +121,37 @@ const ZikaMap = () => {
       {/* Legend */}
       <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
         <div className="text-sm font-semibold" style={{color: 'var(--vn-deep-indigo)'}}>
-          Zika Cases:
+          Reported Zika Cases (2015-2016):
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#FFD700'}}></div>
-          <span className="text-xs text-gray-600">1,000 - 3,000</span>
+          <span className="text-xs text-gray-600">&lt;2,000</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#FFA500'}}></div>
-          <span className="text-xs text-gray-600">3,000 - 5,000</span>
+          <span className="text-xs text-gray-600">2,000 - 5,000</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#FF8C00'}}></div>
-          <span className="text-xs text-gray-600">5,000 - 7,000</span>
+          <span className="text-xs text-gray-600">5,000 - 10,000</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#FF6347'}}></div>
-          <span className="text-xs text-gray-600">7,000 - 10,000</span>
+          <span className="text-xs text-gray-600">10,000 - 50,000</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#DC143C'}}></div>
-          <span className="text-xs text-gray-600">10,000 - 15,000</span>
+          <span className="text-xs text-gray-600">50,000 - 100,000</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-4 rounded" style={{backgroundColor: '#8B0000'}}></div>
-          <span className="text-xs text-gray-600">15,000+</span>
+          <span className="text-xs text-gray-600">100,000+</span>
         </div>
+      </div>
+      
+      {/* Data Source Note */}
+      <div className="mt-4 text-xs text-gray-500 text-center italic">
+        Source: CDC/WHO Zika outbreak surveillance data (2015-2016 epidemic)
       </div>
     </div>
   );
