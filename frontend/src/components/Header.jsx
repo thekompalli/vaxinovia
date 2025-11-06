@@ -6,6 +6,7 @@ import { useTheme } from '../context/ThemeContext';
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { isDark, toggleTheme } = useTheme();
 
   const isActive = (path) => location.pathname === path;
 
