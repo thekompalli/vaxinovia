@@ -12,7 +12,7 @@ export const About = () => {
       experience: '>20 years in translational vaccine and immuno-oncology programs',
       responsibilities: 'Strategic oversight, high-level scientific decisions, regulatory strategy sign-off and primary sponsor representative.',
       achievement: 'Led Rvexia® from discovery to licensing',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/o8nwqzih_Rao.jpg'
     },
     {
       name: 'Dr. Meije Forest',
@@ -22,7 +22,7 @@ export const About = () => {
       experience: 'Expert in corporate governance and IP strategy',
       responsibilities: 'Corporate governance, contract negotiation, IP strategy, regulatory compliance, and submissions oversight.',
       achievement: 'Secured 28 active patents and 3 major licensing deals',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/82fvmcrc_Meije.jpg'
     },
     {
       name: 'Dr. Huma Liaqat',
@@ -32,7 +32,7 @@ export const About = () => {
       experience: 'Experienced in Phase 1/2 vaccine trials',
       responsibilities: 'CRO oversight, site selection, eTMF and GCP auditing. Responsible for trial execution, safety reporting and liaising with clinical sites.',
       achievement: 'Successfully managed 4 clinical programs to Phase 2',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/3rnhcbfp_Huma.jpg'
     },
     {
       name: 'Dr. Suvroto Kormokar',
@@ -52,7 +52,7 @@ export const About = () => {
       experience: 'Financial strategy and fundraising expert',
       responsibilities: 'Budget oversight, resource allocation, fundraising liaison, and financial reporting to funders.',
       achievement: 'Secured €12M annual funding from diverse sources',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/oo26mnbo_Krishna.jpg'
     },
     {
       name: 'Dr. Noof Javed',
@@ -62,7 +62,7 @@ export const About = () => {
       experience: 'Specialist in preclinical immunology',
       responsibilities: 'Coordinates preclinical assays, GLP study execution, and assay validation (ELISA, PRNT, ELISpot). Responsible for data integrity and technical documentation.',
       achievement: 'Established GLP-compliant immunology laboratory',
-      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_vaxinovia-vaccine/artifacts/e08crp8o_Noor.jpg'
     }
   ];
 
