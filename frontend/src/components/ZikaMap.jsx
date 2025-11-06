@@ -59,8 +59,8 @@ const ZikaMap = () => {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const isoA3 = geo.properties.ISO_A3;
-                const countryData = zikaMap[isoA3];
+                const countryId = geo.id;
+                const countryData = zikaMap[countryId];
                 
                 return (
                   <Geography
