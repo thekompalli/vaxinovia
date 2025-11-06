@@ -85,15 +85,13 @@ export const Header = () => {
             
             {/* Science & Technology Dropdown */}
             <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('science')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className="relative group"
             >
               <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
                 {navStructure.science.label} <ChevronDown className="w-4 h-4" />
               </button>
-              {activeDropdown === 'science' && (
-                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+              <div className="absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2">
                   {navStructure.science.items.map((item) => (
                     <Link
                       key={item.path}
@@ -105,20 +103,18 @@ export const Header = () => {
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Programs Dropdown */}
             <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('programs')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className="relative group"
             >
               <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
                 {navStructure.programs.label} <ChevronDown className="w-4 h-4" />
               </button>
-              {activeDropdown === 'programs' && (
-                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+              <div className="absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2">
                   {navStructure.programs.items.map((item) => (
                     <Link
                       key={item.path}
@@ -130,20 +126,18 @@ export const Header = () => {
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Investors Dropdown */}
             <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('investors')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className="relative group"
             >
               <button className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all" style={{color: 'var(--vn-deep-indigo)'}}>
                 {navStructure.investors.label} <ChevronDown className="w-4 h-4" />
               </button>
-              {activeDropdown === 'investors' && (
-                <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2 z-50">
+              <div className="absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 p-2">
                   {navStructure.investors.items.map((item) => (
                     <Link
                       key={item.path}
@@ -155,7 +149,7 @@ export const Header = () => {
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Partners & Contact */}
