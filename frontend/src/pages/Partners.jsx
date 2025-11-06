@@ -26,34 +26,6 @@ export const Partners = () => {
       engagement: 'Analytical methods for vaccine characterization'
     },
     {
-      name: 'ImmunoVax GmbH',
-      type: 'Technology Partner',
-      focus: 'Nanoparticle delivery systems, immunology expertise',
-      logo: 'IV',
-      engagement: 'Joint research on adjuvant-antigen complexes'
-    },
-    {
-      name: 'PharmAlliance Biotech',
-      type: 'CDMO Partner',
-      focus: 'GMP manufacturing, fill-finish operations',
-      logo: 'PAB',
-      engagement: 'Clinical materials production'
-    },
-    {
-      name: 'GenPro S.A.',
-      type: 'Manufacturing Partner',
-      focus: 'Large-scale GMP production, process scale-up',
-      logo: 'GP',
-      engagement: 'Pre-qualified for commercial manufacturing'
-    },
-    {
-      name: 'Biovionics AG',
-      type: 'CRO Partner',
-      focus: 'GLP toxicology, preclinical safety studies',
-      logo: 'BA',
-      engagement: 'Toxicology and safety assessment services'
-    },
-    {
       name: 'European Commission',
       type: 'Funding Partner',
       focus: 'Horizon Europe, EIC Accelerator programs',
@@ -66,13 +38,6 @@ export const Partners = () => {
       focus: 'Global health initiatives, vaccine access',
       logo: 'GF',
       engagement: 'Grant funding for neglected disease vaccines'
-    },
-    {
-      name: 'CNRS',
-      type: 'Research Institution',
-      focus: 'Academic collaboration, structural biology',
-      logo: 'CNRS',
-      engagement: 'Joint research programs and publications'
     }
   ];
 
