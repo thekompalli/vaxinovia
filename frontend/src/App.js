@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 import "./styles/vaxinovia.css";
+import "./styles/dark-mode.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from './components/ui/sonner';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Pages
 import { Home } from './pages/Home';
