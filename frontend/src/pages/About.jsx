@@ -145,7 +145,8 @@ export const About = () => {
                     <img
                       src={leader.image}
                       alt={leader.name}
-                      className="w-full h-64 lg:h-full object-cover rounded-lg"
+                      className="w-full h-80 object-cover rounded-lg"
+                      style={{objectPosition: 'center top'}}
                     />
                   </div>
 
