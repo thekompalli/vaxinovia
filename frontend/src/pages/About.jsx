@@ -70,7 +70,7 @@ export const About = () => {
     { icon: <Users className="w-8 h-8" />, value: '200+', label: 'Team Members' },
     { icon: <Award className="w-8 h-8" />, value: '70', label: 'Scientists' },
     { icon: <Globe className="w-8 h-8" />, value: '30+', label: 'Years Experience' },
-    { icon: <TrendingUp className="w-8 h-8" />, value: '€12M', label: 'Annual Funding' }
+    { icon: <TrendingUp className="w-8 h-8" />, value: 'USD 9M', label: 'Total Program Funding' }
   ];
 
   const values = [
