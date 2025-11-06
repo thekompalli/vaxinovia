@@ -388,6 +388,113 @@ export const Investment = () => {
           </div>
         </div>
       </section>
+
+      {/* Engagement Section */}
+      <section className="py-16" style={{backgroundColor: 'var(--vn-mist)'}}>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="card">
+            <h3 className="text-2xl font-bold text-center mb-4" style={{color: 'var(--vn-deep-indigo)'}}>
+              Interested in This Opportunity?
+            </h3>
+            <p className="text-center text-gray-600 mb-8">
+              Let us know what you think! Your feedback helps us understand investor interest.
+            </p>
+            
+            {/* Like and Comment Buttons */}
+            <div className="flex justify-center gap-4 mb-6">
+              <button
+                onClick={handleLike}
+                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
+                  liked 
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg transform scale-105' 
+                    : 'bg-white border-2 hover:bg-gray-50 text-gray-700'
+                }`}
+                style={liked ? {} : {borderColor: 'var(--vn-aqua)'}}
+              >
+                <ThumbsUp className={`w-5 h-5 ${liked ? 'fill-current' : ''}`} />
+                <span>{liked ? 'Liked!' : 'Like This'}</span>
+              </button>
+              
+              <button
+                onClick={() => setShowCommentForm(!showCommentForm)}
+                className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border-2 hover:bg-gray-50 transition-all text-gray-700"
+                style={{borderColor: 'var(--vn-aqua)'}}
+              >
+                <MessageSquare className="w-5 h-5" />
+                <span>Leave a Comment</span>
+              </button>
+            </div>
+
+            {/* Comment Form */}
+            {showCommentForm && (
+              <form onSubmit={handleCommentSubmit} className="space-y-4 mt-8 pt-6 border-t border-gray-200">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-semibold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>
+                      Your Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="comment" className="block text-sm font-semibold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>
+                    Your Comment *
+                  </label>
+                  <textarea
+                    id="comment"
+                    required
+                    rows="4"
+                    value={formData.comment}
+                    onChange={(e) => setFormData({...formData, comment: e.target.value})}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                    placeholder="Share your thoughts about this investment opportunity..."
+                  />
+                </div>
+                
+                <div className="flex gap-3 justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setShowCommentForm(false)}
+                    className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="btn-primary"
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Submit Comment'}
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
