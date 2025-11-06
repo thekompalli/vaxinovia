@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, DollarSign, Target, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, Users, Award, CheckCircle, ArrowRight, ThumbsUp, MessageSquare } from 'lucide-react';
 import ZikaMap from '../components/ZikaMap';
+import { toast } from '../components/ui/sonner';
 
 export const Investment = () => {
   const useOfFunds = [
