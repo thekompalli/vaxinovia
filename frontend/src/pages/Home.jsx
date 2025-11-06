@@ -179,9 +179,20 @@ export const Home = () => {
           <p className="text-xl text-gray-600 mb-8">
             Request our comprehensive Zika IMPD/CMC overview and learn how we can collaborate on the next generation of recombinant vaccines.
           </p>
-          <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
-            Request the Zika IMPD/CMC Overview <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => {
+                const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+                window.open(`${BACKEND_URL}/api/downloads/zika-impd`, '_blank');
+              }}
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              Download Zika IMPD/CMC Overview <ArrowRight className="w-5 h-5" />
+            </button>
+            <Link to="/contact" className="btn-secondary inline-flex items-center gap-2">
+              Contact for Partnership <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
