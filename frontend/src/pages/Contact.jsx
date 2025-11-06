@@ -22,19 +22,39 @@ export const Contact = () => {
       return;
     }
 
-    // Mock submission - will be replaced with backend
-    toast.success('Thank you! We will get back to you within 24 hours.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      organization: '',
-      email: '',
-      purpose: '',
-      region: '',
-      message: '',
-      gdprConsent: false
-    });
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/api/contact/inquiry`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          form_type: formType
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Thank you! We will get back to you within 24 hours.');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          organization: '',
+          email: '',
+          purpose: '',
+          region: '',
+          message: '',
+          gdprConsent: false
+        });
+      } else {
+        toast.error('Failed to submit inquiry. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('An error occurred. Please try again later.');
+    }
   };
 
   const handleChange = (e) => {
