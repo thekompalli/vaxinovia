@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign, Target, Users, Award, CheckCircle, ArrowRight, ThumbsUp, MessageSquare } from 'lucide-react';
 import ZikaMap from '../components/ZikaMap';
@@ -6,6 +6,7 @@ import { toast } from '../components/ui/sonner';
 
 export const Investment = () => {
   const [liked, setLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -14,14 +15,36 @@ export const Investment = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Load like count and user's like status from localStorage on mount
+  useEffect(() => {
+    const storedCount = localStorage.getItem('investment_like_count');
+    const userLiked = localStorage.getItem('investment_user_liked');
+    
+    if (storedCount) {
+      setLikeCount(parseInt(storedCount, 10));
+    }
+    
+    if (userLiked === 'true') {
+      setLiked(true);
+    }
+  }, []);
+
   const handleLike = async () => {
     if (!liked) {
+      // Update state
       setLiked(true);
+      const newCount = likeCount + 1;
+      setLikeCount(newCount);
+      
+      // Save to localStorage
+      localStorage.setItem('investment_like_count', newCount.toString());
+      localStorage.setItem('investment_user_liked', 'true');
+      
       toast.success('Thank you for your interest!');
       
       // Send like notification to Formspree
       try {
-        await fetch('https://formspree.io/f/mblpnaaa', {
+        const response = await fetch('https://formspree.io/f/mblpnaaa', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -29,9 +52,14 @@ export const Investment = () => {
           body: JSON.stringify({
             type: 'Investment Page Like',
             message: 'A visitor liked the Investment Opportunity page',
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            totalLikes: newCount
           }),
         });
+        
+        if (!response.ok) {
+          console.error('Failed to send like to Formspree');
+        }
       } catch (error) {
         console.error('Error sending like notification:', error);
       }
