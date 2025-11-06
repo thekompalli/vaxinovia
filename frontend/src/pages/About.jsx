@@ -127,8 +127,8 @@ export const About = () => {
                   <div className="text-sm opacity-90">5+ licensed vaccines in our portfolio</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">Global</div>
-                  <div className="text-sm opacity-90">Impact across 50+ countries</div>
+                  <div className="text-3xl font-bold mb-2">8 Countries</div>
+                  <div className="text-sm opacity-90">Target markets for ZIKAvia™</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-2">Leadership</div>
