@@ -169,6 +169,9 @@ test_plan:
       - working: true
         agent: "main"
         comment: "Added interactive engagement section at bottom of Investment page with 'Like' and 'Comment' functionality. Both actions send data to the same Formspree form (mblpnaaa) used by contact forms. Like button shows animated state change with gradient background and toast notification. Comment form includes name, email, and comment fields with proper validation and styling."
+      - working: true
+        agent: "main"
+        comment: "Enhanced like functionality with persistent counter using localStorage. Counter displays '1 person interested' or 'X people interested' with proper pluralization. Like count persists across page reloads. Each like sends notification to Formspree including timestamp and total like count. User's like status is tracked to prevent duplicate likes. Successfully tested - both like and comment submissions confirmed sending to Formspree."
 
 agent_communication:
   - agent: "main"
