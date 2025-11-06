@@ -134,7 +134,19 @@ export const Investment = () => {
       {/* Customer Segments */}
       <section className="py-20" style={{backgroundColor: 'var(--vn-mist)'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Target Customer Segments</h2>
+          <h2 className="text-3xl font-bold text-center mb-6" style={{color: 'var(--vn-deep-indigo)'}}>Target Customer Segments</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our vaccine targets regions with the highest Zika burden and epidemic risk, serving both public health systems and travelers.
+          </p>
+          
+          {/* Interactive World Map */}
+          <div className="card mb-12">
+            <h3 className="text-2xl font-bold mb-6 text-center" style={{color: 'var(--vn-deep-indigo)'}}>
+              Global Zika Distribution: Highest-Impact Markets
+            </h3>
+            <ZikaMap />
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-6">
             {customerSegments.map((customer, index) => (
               <div key={index} className="card">
