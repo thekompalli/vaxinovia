@@ -30,14 +30,14 @@ const ZikaMap = () => {
     return acc;
   }, {});
 
-  // Color scale based on cases - more realistic outbreak data
+  // Color scale based on cases - matching VaxiNovia theme colors
   const getColor = (cases) => {
-    if (cases >= 100000) return '#8B0000'; // Dark red - highest
-    if (cases >= 50000) return '#DC143C'; // Crimson
-    if (cases >= 10000) return '#FF6347';  // Tomato
-    if (cases >= 5000) return '#FF8C00';  // Dark orange
-    if (cases >= 2000) return '#FFA500';  // Orange
-    return '#FFD700'; // Gold
+    if (cases >= 100000) return '#1A365D'; // Deep indigo - highest
+    if (cases >= 50000) return '#2B4C7E';  // VN deep indigo
+    if (cases >= 10000) return '#3B6EA5';  // Medium blue
+    if (cases >= 5000) return '#4D8FBF';   // Light blue
+    if (cases >= 2000) return '#29B7C5';   // VN aqua
+    return '#4DD4E6'; // Light aqua - lowest
   };
 
   const handleMouseMove = (e) => {
