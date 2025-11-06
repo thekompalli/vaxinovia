@@ -125,9 +125,23 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center justify-between mx-4 mt-4 mb-2">
+              <span className="text-sm font-medium" style={{color: 'var(--vn-deep-indigo)'}}>Dark Mode</span>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {isDark ? (
+                  <Sun className="w-5 h-5" style={{color: 'var(--vn-aqua)'}} />
+                ) : (
+                  <Moon className="w-5 h-5" style={{color: 'var(--vn-deep-indigo)'}} />
+                )}
+              </button>
+            </div>
             <Link
               to="/contact"
-              className="block mt-4 mx-4 text-center btn-primary"
+              className="block mt-2 mx-4 text-center btn-primary"
               onClick={() => setIsOpen(false)}
             >
               Request Dossier
