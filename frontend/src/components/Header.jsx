@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Moon, Sun } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
