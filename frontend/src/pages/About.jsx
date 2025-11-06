@@ -103,7 +103,7 @@ export const About = () => {
               Founded in 1995 in Lyon, France, VaxiNovia S.A. is a leading biotechnology company specializing in recombinant vaccine development. Our mission is to accelerate safe, scalable vaccines from structure-guided antigens to GMP-grade clinical materials.
             </p>
             <p className="text-xl text-gray-700 leading-relaxed">
-              With over 30 years of collective expertise, our team has advanced four subunit vaccine candidates to Phase 2, secured €12M in annual funding, and established 40+ global collaborations across Europe, North America, and Asia.
+              With over 30 years of collective expertise, our team has advanced four subunit vaccine candidates to Phase 2, secured USD 9M in program funding, and established 40+ global collaborations across Europe, North America, and Asia.
             </p>
           </div>
         </div>
