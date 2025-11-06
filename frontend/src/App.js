@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 
 // Pages
 import { Home } from './pages/Home';
+import { About } from './pages/About';
 import { InstitutionalExperience } from './pages/InstitutionalExperience';
 import { Infrastructure } from './pages/Infrastructure';
 import { Innovation } from './pages/Innovation';
