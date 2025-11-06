@@ -26,29 +26,31 @@ import { Legal } from './pages/Legal';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<InstitutionalExperience />} />
-          <Route path="/infrastructure" element={<Infrastructure />} />
-          <Route path="/innovation" element={<Innovation />} />
-          <Route path="/strategy" element={<VaccineStrategy />} />
-          <Route path="/staffing" element={<Staffing />} />
-          <Route path="/financing" element={<Financing />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/legal/:type" element={<Legal />} />
-        </Routes>
-        <Footer />
-        <Toaster position="top-right" />
-      </BrowserRouter>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<InstitutionalExperience />} />
+            <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/innovation" element={<Innovation />} />
+            <Route path="/strategy" element={<VaccineStrategy />} />
+            <Route path="/staffing" element={<Staffing />} />
+            <Route path="/financing" element={<Financing />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/publications" element={<Publications />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/legal/:type" element={<Legal />} />
+          </Routes>
+          <Footer />
+          <Toaster position="top-right" />
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
