@@ -109,6 +109,37 @@ export const About = () => {
         </div>
       </section>
 
+      {/* Vision Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="card" style={{background: 'linear-gradient(135deg, #2B4C7E 0%, #29B7C5 100%)', color: 'white'}}>
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{backgroundColor: 'rgba(255, 255, 255, 0.2)'}}>
+                <TrendingUp className="w-10 h-10" />
+              </div>
+              <h2 className="text-4xl font-bold mb-6">Our Vision</h2>
+              <p className="text-2xl leading-relaxed mb-6 opacity-95">
+                To transform global health security by delivering breakthrough vaccines that protect billions from emerging infectious diseases—faster, safer, and more equitably than ever before.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 mt-10">
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">2030</div>
+                  <div className="text-sm opacity-90">5+ licensed vaccines in our portfolio</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">Global</div>
+                  <div className="text-sm opacity-90">Impact across 50+ countries</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">Leadership</div>
+                  <div className="text-sm opacity-90">Top 3 in structure-guided vaccine design</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
