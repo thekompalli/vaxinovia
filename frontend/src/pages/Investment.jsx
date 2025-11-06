@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign, Target, Users, Award, CheckCircle, ArrowRight, ThumbsUp, MessageSquare } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import ZikaMap from '../components/ZikaMap';
 import { toast } from '../components/ui/sonner';
 
