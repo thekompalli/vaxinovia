@@ -23,15 +23,21 @@ export const Contact = () => {
     }
 
     try {
-      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-      const response = await fetch(`${BACKEND_URL}/api/contact/inquiry`, {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/mblpnaaa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          form_type: formType
+          name: formData.name,
+          organization: formData.organization,
+          email: formData.email,
+          purpose: formData.purpose,
+          region: formData.region,
+          message: formData.message,
+          formType: formType,
+          _subject: `VaxiNovia Contact: ${formType} - ${formData.name}`,
         }),
       });
 
