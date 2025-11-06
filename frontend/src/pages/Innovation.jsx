@@ -108,6 +108,132 @@ export const Innovation = () => {
         </div>
       </section>
 
+      {/* Why Us? */}
+      <section className="py-20" style={{backgroundColor: 'var(--vn-mist)'}}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Why VaxiNovia?</h2>
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)'}}>
+                  <Award className="w-6 h-6" style={{color: 'var(--vn-aqua)'}} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>Proven ASIP® Platform</h3>
+                  <p className="text-gray-700">
+                    Our proprietary platform has successfully stabilized 8+ viral antigens, reducing development timelines by 40% compared to traditional approaches. Validated through 4 clinical programs reaching Phase 2.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)'}}>
+                  <Users className="w-6 h-6" style={{color: 'var(--vn-aqua)'}} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>World-Class Expertise</h3>
+                  <p className="text-gray-700">
+                    Team of 70+ scientists with Oxford, Stanford, MIT, and Baylor credentials. Over 30 years combined experience in viral immunology, structural biology, and clinical development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)'}}>
+                  <TrendingUp className="w-6 h-6" style={{color: 'var(--vn-aqua)'}} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>Robust IP Portfolio</h3>
+                  <p className="text-gray-700">
+                    28 active patents across 5 families, protecting core platform technology, antigen designs, and formulation innovations. 3 major licensing deals completed with Big Pharma partners.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)'}}>
+                  <Lightbulb className="w-6 h-6" style={{color: 'var(--vn-aqua)'}} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>AI-Driven Innovation</h3>
+                  <p className="text-gray-700">
+                    VaxiPredict™ and ImmunoSim™ software accelerate epitope mapping and formulation optimization. Computational design reduces wet-lab iterations by 60% and speeds candidate selection.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Track Record */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Track Record of Success</h2>
+          <div className="space-y-6">
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="badge badge-success text-lg px-4 py-2">2019</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>Rvexia® (Recombinant Vaccine for Hepatitis E)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Licensed to Takeda Pharmaceuticals for €8M upfront + milestones. Completed Phase 2 with 94% seroconversion rate. Currently in Phase 3 preparation for high-risk populations.
+                  </p>
+                  <div className="text-sm" style={{color: 'var(--vn-aqua)'}}>
+                    <strong>Impact:</strong> First stabilized HEV E2 protein vaccine candidate globally
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="badge badge-success text-lg px-4 py-2">2021</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>ChikVax™ (Chikungunya E2 Nanoparticle Vaccine)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Phase 2 completion with neutralizing titers exceeding natural infection by 3-fold. Partnership discussions with Valneva and Coalition for Epidemic Preparedness Innovations (CEPI).
+                  </p>
+                  <div className="text-sm" style={{color: 'var(--vn-aqua)'}}>
+                    <strong>Impact:</strong> Addressing 1M+ annual Chikungunya cases in endemic regions
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="badge badge-primary text-lg px-4 py-2">2023</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>DenguShield® (Tetravalent Dengue Vaccine)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Phase 1 data showed balanced immune response across all 4 serotypes with excellent safety profile. No antibody-dependent enhancement (ADE) observed—a critical breakthrough for dengue vaccines.
+                  </p>
+                  <div className="text-sm" style={{color: 'var(--vn-aqua)'}}>
+                    <strong>Impact:</strong> Potential solution for 400M+ dengue infections annually
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-start gap-4">
+                <div className="badge badge-warning text-lg px-4 py-2">Current</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2" style={{color: 'var(--vn-deep-indigo)'}}>ZIKAvia™ (Zika E+NS1 Dual-Antigen Vaccine)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Preclinical NHP data demonstrates PRNT₅₀ titers &gt;1:6400 (exceptional), balanced Th1/Th2 response, and no ADE. IND/CTA submission planned for Q4 2025 with EA-RIVAC co-funding.
+                  </p>
+                  <div className="text-sm" style={{color: 'var(--vn-aqua)'}}>
+                    <strong>Impact:</strong> First-in-class Zika vaccine targeting 100M+ at-risk population
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Practices */}
       <section className="py-20" style={{backgroundColor: 'var(--vn-mist)'}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
