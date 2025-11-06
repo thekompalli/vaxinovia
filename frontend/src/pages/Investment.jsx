@@ -424,9 +424,19 @@ export const Investment = () => {
             <h3 className="text-2xl font-bold text-center mb-4" style={{color: 'var(--vn-deep-indigo)'}}>
               Interested in This Opportunity?
             </h3>
-            <p className="text-center text-gray-600 mb-8">
+            <p className="text-center text-gray-600 mb-4">
               Let us know what you think! Your feedback helps us understand investor interest.
             </p>
+            
+            {/* Like Counter */}
+            {likeCount > 0 && (
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <ThumbsUp className="w-5 h-5" style={{color: 'var(--vn-aqua)'}} />
+                <span className="text-lg font-semibold" style={{color: 'var(--vn-deep-indigo)'}}>
+                  {likeCount} {likeCount === 1 ? 'person' : 'people'} interested
+                </span>
+              </div>
+            )}
             
             {/* Like and Comment Buttons */}
             <div className="flex justify-center gap-4 mb-6">
