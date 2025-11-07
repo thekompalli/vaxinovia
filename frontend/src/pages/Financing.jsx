@@ -226,7 +226,7 @@ export const Financing = () => {
             <div className="card">
               <div className="badge badge-primary mb-4">Phase 3: 3.5 Years</div>
               <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Clinical Trials</h3>
-              <p className="text-gray-700 mb-4">USD 4.5M for Phase I safety trials and Phase II immunogenicity studies (100-300 subjects) with data analysis.</p>
+              <p className="text-gray-700 mb-4">USD 4.5M for Phase I safety trials and Phase II immunogenicity studies (200-500 subjects) with data analysis.</p>
               <div className="text-sm text-gray-600">
                 <strong>Key Deliverables:</strong> Safety profile, immunogenicity data, Phase 3-ready package
               </div>
