@@ -52,7 +52,7 @@ export const VaccineStrategy = () => {
       objectives: 'Scale up under GMP for human use',
       tech: 'Randomized controlled trial',
       icon: <Syringe className="w-6 h-6" />,
-      image: null
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/lli8an2w_stage-6.jpg'
     },
     {
       no: 7,
