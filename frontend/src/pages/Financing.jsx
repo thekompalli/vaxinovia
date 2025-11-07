@@ -75,7 +75,7 @@ export const Financing = () => {
           <div className="max-w-4xl">
             <h1 className="text-5xl font-bold mb-6" style={{color: 'var(--vn-deep-indigo)'}}>Financing Plan</h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Comprehensive 6-year funding strategy totaling USD {totalFunding.toFixed(1)}M, with balanced contributions from VaxiNovia, EA-RIVAC, and strategic partner Sanofi.
+              Comprehensive funding strategy totaling USD {totalFunding.toFixed(1)}M over approximately 4.5 years, with balanced contributions from VaxiNovia, EA-RIVAC, and strategic partner Sanofi.
             </p>
           </div>
         </div>
