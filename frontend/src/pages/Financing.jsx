@@ -11,52 +11,52 @@ export const Financing = () => {
 
   const financingData = [
     {
-      year: 1,
-      tasks: 'Pre-clinical toxicology, process development, regulatory dossier preparation',
-      vaxinovia: 0.2,
-      earivac: 0.2,
-      sanofi: 0.2,
-      total: 0.6
-    },
-    {
-      year: 2,
-      tasks: 'Pre-clinical continuation; Phase 1 submission & initiation',
-      vaxinovia: 0.3,
-      earivac: 0.3,
-      sanofi: 0.3,
-      total: 0.9
-    },
-    {
-      year: 3,
-      tasks: 'Phase 1 Clinical Trial (safety & dosage determination)',
-      vaxinovia: 0.6,
-      earivac: 0.6,
-      sanofi: 0.7,
-      total: 1.9
-    },
-    {
-      year: 4,
-      tasks: 'Phase 1 completion; Phase 2 trial initiation',
-      vaxinovia: 0.6,
-      earivac: 0.6,
-      sanofi: 0.5,
-      total: 1.7
-    },
-    {
-      year: 5,
-      tasks: 'Phase 2 continuation (immunogenicity assessment)',
+      timeline: '1.5 yr',
+      tasks: 'Development & Scale-up (Analytical testing, Pilot & GMP batches, CMC for IND)',
       vaxinovia: 0.9,
       earivac: 0.9,
       sanofi: 0.9,
       total: 2.7
     },
     {
-      year: 6,
-      tasks: 'Phase 2 completion; data analysis & reporting',
+      timeline: '6 months',
+      tasks: 'Preclinical Studies (In vivo immunogenicity, dose finding, GLP toxicology, and challenge studies)',
+      vaxinovia: 0.2,
+      earivac: 0.2,
+      sanofi: 0.2,
+      total: 0.6
+    },
+    {
+      timeline: '6 months',
+      tasks: 'Process Development & GMP Manufacturing, Regulatory Preparation (Pre-IND / IND / CTA) and initiate Phase I',
       vaxinovia: 0.4,
       earivac: 0.4,
       sanofi: 0.4,
       total: 1.2
+    },
+    {
+      timeline: '1 year',
+      tasks: 'Phase I Clinical Trial (safety & dosage)',
+      vaxinovia: 0.4,
+      earivac: 0.4,
+      sanofi: 0.4,
+      total: 1.2
+    },
+    {
+      timeline: '2 years',
+      tasks: 'Phase II Clinical Trial (100-300) Immunogenicity Analysis',
+      vaxinovia: 0.9,
+      earivac: 0.9,
+      sanofi: 0.9,
+      total: 2.7
+    },
+    {
+      timeline: '6 months',
+      tasks: 'Phase II Clinical Trial completion; data analysis & reporting',
+      vaxinovia: 0.2,
+      earivac: 0.2,
+      sanofi: 0.2,
+      total: 0.6
     }
   ];
 
