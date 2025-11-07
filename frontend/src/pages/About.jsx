@@ -42,7 +42,7 @@ export const About = () => {
       experience: 'Expert in computational structural biology',
       responsibilities: 'Leads ASIP® computational/structural design, antigen optimization and preclinical immunogenicity strategy.',
       achievement: 'Developed ASIP® platform and VaxiPredict™ software',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop'
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/1b0du8i4_suvroto.jpg'
     },
     {
       name: 'Dr. Krishna',
