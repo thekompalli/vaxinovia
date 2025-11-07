@@ -103,30 +103,56 @@ export const VaccineStrategy = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Development Process</h2>
           <div className="space-y-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="timeline-step">
-                <div className="card">
+            {processSteps.map((step) => (
+              <div key={step.no}>
+                <div 
+                  className="card cursor-pointer transition-all hover:shadow-lg"
+                  onClick={() => step.image && toggleStage(step.no)}
+                  style={{
+                    cursor: step.image ? 'pointer' : 'default',
+                    border: expandedStage === step.no ? '2px solid var(--vn-aqua)' : 'none'
+                  }}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'var(--vn-aqua)', color: 'white'}}>
-                      {step.icon}
+                    <div className="badge badge-primary flex-shrink-0">
+                      Stage {step.no}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="badge badge-primary">Stage {step.no}</span>
-                        <h3 className="text-xl font-bold" style={{color: 'var(--vn-deep-indigo)'}}>{step.stage}</h3>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <h3 className="text-xl font-bold mb-3 flex items-center gap-2" style={{color: 'var(--vn-deep-indigo)'}}>
+                        {step.stage}
+                        {step.image && (
+                          <span className="text-sm text-gray-500">(click to {expandedStage === step.no ? 'hide' : 'view'} diagram)</span>
+                        )}
+                      </h3>
+                      <div className="space-y-2">
                         <div>
-                          <div className="text-sm font-semibold mb-1" style={{color: 'var(--vn-deep-indigo)'}}>Main Objectives:</div>
-                          <p className="text-gray-700">{step.objectives}</p>
+                          <span className="font-semibold" style={{color: 'var(--vn-aqua)'}}>Main Objectives: </span>
+                          <span className="text-gray-700">{step.objectives}</span>
                         </div>
-                        <div>
-                          <div className="text-sm font-semibold mb-1" style={{color: 'var(--vn-deep-indigo)'}}>Tech & QC:</div>
-                          <p className="text-gray-700">{step.tech}</p>
-                        </div>
+                        {step.tech && (
+                          <div>
+                            <span className="font-semibold" style={{color: 'var(--vn-aqua)'}}>Tech & QC: </span>
+                            <span className="text-gray-700">{step.tech}</span>
+                          </div>
+                        )}
                       </div>
                     </div>
+                    <div className="p-3 rounded-full flex-shrink-0" style={{backgroundColor: 'rgba(41, 183, 197, 0.1)', color: 'var(--vn-aqua)'}}>
+                      {step.icon}
+                    </div>
                   </div>
+                  
+                  {/* Expanded Image Section */}
+                  {expandedStage === step.no && step.image && (
+                    <div className="mt-6 pt-6 border-t border-gray-200 animate-fadeIn">
+                      <img 
+                        src={step.image} 
+                        alt={`${step.stage} diagram`}
+                        className="w-full rounded-lg shadow-lg"
+                        style={{maxHeight: '600px', objectFit: 'contain'}}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
