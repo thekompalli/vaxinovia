@@ -44,7 +44,7 @@ export const Financing = () => {
     },
     {
       timeline: '2 years',
-      tasks: 'Phase II Clinical Trial (100-300) Immunogenicity Analysis',
+      tasks: 'Phase II Clinical Trial (200-500) Immunogenicity Analysis',
       vaxinovia: 0.9,
       earivac: 0.9,
       sanofi: 0.9,
