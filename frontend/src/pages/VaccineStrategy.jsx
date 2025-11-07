@@ -20,7 +20,7 @@ export const VaccineStrategy = () => {
       objectives: 'Expression in Baculovirus-insect system, >90% purity',
       tech: 'SDS-PAGE, Western blot, HPLC; endotoxin <0.1 EU/μg',
       icon: <FlaskConical className="w-6 h-6" />,
-      image: null
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/z185syde_stage-2.jpg'
     },
     {
       no: 3,
