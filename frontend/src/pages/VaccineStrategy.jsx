@@ -3,64 +3,78 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 import { CheckCircle, Beaker, FlaskConical, Syringe, Users, FileCheck } from 'lucide-react';
 
 export const VaccineStrategy = () => {
+  const [expandedStage, setExpandedStage] = useState(null);
+
   const processSteps = [
     {
       no: 1,
       stage: 'Antigen Design',
-      objectives: 'Stabilize E (no PrM), fuse NS1 for breadth',
+      objectives: 'Stabilize the chimeric protein E-linker-NS1',
       tech: 'Structure modeling, codon optimization, sequence verification',
-      icon: <Beaker className="w-6 h-6" />
+      icon: <Beaker className="w-6 h-6" />,
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/m3wg3pga_stage-1.jpg'
     },
     {
       no: 2,
       stage: 'Expression & Purification',
-      objectives: 'Baculovirus–insect + CHO; purity >95%',
+      objectives: 'Expression in Baculovirus-insect system, >90% purity',
       tech: 'SDS-PAGE, Western blot, HPLC; endotoxin <0.1 EU/μg',
-      icon: <FlaskConical className="w-6 h-6" />
+      icon: <FlaskConical className="w-6 h-6" />,
+      image: null
     },
     {
       no: 3,
       stage: 'Adjuvant Formulation',
-      objectives: 'Alum or emulsion to enhance response',
-      tech: 'Stability testing, particle size analysis, potency assays',
-      icon: <FileCheck className="w-6 h-6" />
+      objectives: 'Alum+CpG for enhanced response',
+      tech: null,
+      icon: <FileCheck className="w-6 h-6" />,
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/t266x7mt_stage-3.jpg'
     },
     {
       no: 4,
       stage: 'Analytical Methods and Scale up',
       objectives: 'Create and qualify the assays needed to test vaccine in animal models',
       tech: 'ELISA & other In-vitro assays',
-      icon: <FileCheck className="w-6 h-6" />
+      icon: <FileCheck className="w-6 h-6" />,
+      image: null
     },
     {
       no: 5,
       stage: 'Pre-clinical Testing',
       objectives: 'Safety, immunogenicity, efficacy',
       tech: 'GLP toxicology, cytokine profiling, neutralization assays',
-      icon: <Users className="w-6 h-6" />
+      icon: <Users className="w-6 h-6" />,
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/9tfrxk9v_stage-5.png'
     },
     {
       no: 6,
       stage: 'Clinical-Grade Manufacturing',
       objectives: 'Scale up under GMP for human use',
-      tech: 'Process validation; sterility/identity per ICH Q5C',
-      icon: <Syringe className="w-6 h-6" />
+      tech: 'Randomized controlled trial',
+      icon: <Syringe className="w-6 h-6" />,
+      image: null
     },
     {
       no: 7,
       stage: 'Phase 1 Trial',
       objectives: 'Safety, tolerability, immunogenicity (dose-escalation)',
       tech: 'Randomized controlled trial with DSMB oversight',
-      icon: <CheckCircle className="w-6 h-6" />
+      icon: <CheckCircle className="w-6 h-6" />,
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/aj7dthj5_stage-7.jpg'
     },
     {
       no: 8,
       stage: 'Phase 2 Trial',
       objectives: 'Confirm safety; dose & adjuvant optimization',
       tech: 'Neutralizing antibody titers; T-cell ELISpot',
-      icon: <CheckCircle className="w-6 h-6" />
+      icon: <CheckCircle className="w-6 h-6" />,
+      image: 'https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/6rqj1moa_stage-8.jpg'
     }
   ];
+
+  const toggleStage = (stageNo) => {
+    setExpandedStage(expandedStage === stageNo ? null : stageNo);
+  };
 
   const opportunities = [
     'No licensed Zika vaccine; high neonatal & economic burden',
