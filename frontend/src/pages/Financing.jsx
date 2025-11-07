@@ -170,7 +170,7 @@ export const Financing = () => {
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>Year</th>
+                  <th>Timeline</th>
                   <th>Key Tasks</th>
                   <th className="text-right">VaxiNovia</th>
                   <th className="text-right">EA-RIVAC</th>
@@ -179,9 +179,9 @@ export const Financing = () => {
                 </tr>
               </thead>
               <tbody>
-                {financingData.map((row) => (
-                  <tr key={row.year}>
-                    <td className="font-bold">Year {row.year}</td>
+                {financingData.map((row, index) => (
+                  <tr key={index}>
+                    <td className="font-bold">{row.timeline}</td>
                     <td>{row.tasks}</td>
                     <td className="text-right">${row.vaxinovia.toFixed(1)}M</td>
                     <td className="text-right">${row.earivac.toFixed(1)}M</td>
