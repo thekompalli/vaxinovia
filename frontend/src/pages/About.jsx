@@ -56,7 +56,7 @@ export const About = () => {
     },
     {
       name: 'Dr. Noof Javed',
-      credentials: 'PhD (MIT)',
+      credentials: 'Biochemical engineer and researcher from MIT',
       role: 'Research Scientist / Translational Lead',
       fte: '1.0 FTE',
       experience: 'Specialist in preclinical immunology',
