@@ -27,27 +27,34 @@ export const VaccineStrategy = () => {
     },
     {
       no: 4,
+      stage: 'Analytical Methods and Scale up',
+      objectives: 'Create and qualify the assays needed to test vaccine in animal models',
+      tech: 'ELISA & other In-vitro assays',
+      icon: <FileCheck className="w-6 h-6" />
+    },
+    {
+      no: 5,
       stage: 'Pre-clinical Testing',
       objectives: 'Safety, immunogenicity, efficacy',
       tech: 'GLP toxicology, cytokine profiling, neutralization assays',
       icon: <Users className="w-6 h-6" />
     },
     {
-      no: 5,
+      no: 6,
       stage: 'Clinical-Grade Manufacturing',
       objectives: 'Scale up under GMP for human use',
       tech: 'Process validation; sterility/identity per ICH Q5C',
       icon: <Syringe className="w-6 h-6" />
     },
     {
-      no: 6,
+      no: 7,
       stage: 'Phase 1 Trial',
       objectives: 'Safety, tolerability, immunogenicity (dose-escalation)',
       tech: 'Randomized controlled trial with DSMB oversight',
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
-      no: 7,
+      no: 8,
       stage: 'Phase 2 Trial',
       objectives: 'Confirm safety; dose & adjuvant optimization',
       tech: 'Neutralizing antibody titers; T-cell ELISpot',
