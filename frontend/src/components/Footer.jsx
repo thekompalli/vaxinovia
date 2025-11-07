@@ -85,7 +85,7 @@ export const Footer = () => {
             <form 
               action="https://formspree.io/f/mblpnaaa" 
               method="POST"
-              className="flex gap-2"
+              className="flex gap-2 mb-6"
             >
               <input
                 type="email"
@@ -101,6 +101,15 @@ export const Footer = () => {
                 Subscribe
               </button>
             </form>
+
+            {/* QR Code */}
+            <div className="flex justify-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_biotech-dash/artifacts/xdkjw2k5_image.png" 
+                alt="Scan QR code for more information"
+                className="w-40 h-40 object-contain"
+              />
+            </div>
           </div>
         </div>
 
