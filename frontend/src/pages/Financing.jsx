@@ -208,27 +208,27 @@ export const Financing = () => {
           <h2 className="text-3xl font-bold text-center mb-12" style={{color: 'var(--vn-deep-indigo)'}}>Key Funding Milestones</h2>
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="card">
-              <div className="badge badge-primary mb-4">Years 1-2</div>
+              <div className="badge badge-primary mb-4">Phase 1: 1.5 Years</div>
+              <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Development & Scale-up</h3>
+              <p className="text-gray-700 mb-4">USD 2.7M investment in analytical testing, pilot & GMP batches, and CMC documentation for IND submission.</p>
+              <div className="text-sm text-gray-600">
+                <strong>Key Deliverables:</strong> Validated analytical methods, GMP-grade material, CMC dossier
+              </div>
+            </div>
+            <div className="card">
+              <div className="badge badge-primary mb-4">Phase 2: 1 Year</div>
               <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Preclinical & Regulatory</h3>
-              <p className="text-gray-700 mb-4">USD 1.5M investment in GLP toxicology, process optimization, and regulatory dossier preparation for Phase 1 CTA submission.</p>
+              <p className="text-gray-700 mb-4">USD 1.8M for GLP toxicology studies, regulatory preparation (Pre-IND/IND/CTA), and Phase I initiation.</p>
               <div className="text-sm text-gray-600">
-                <strong>Key Deliverables:</strong> IND/CTA filing, clinical material production, safety data package
+                <strong>Key Deliverables:</strong> GLP safety data, IND/CTA approval, clinical trial authorization
               </div>
             </div>
             <div className="card">
-              <div className="badge badge-primary mb-4">Years 3-4</div>
-              <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Phase 1 Clinical</h3>
-              <p className="text-gray-700 mb-4">USD 3.6M for dose-escalation safety trials, immunogenicity assessment, and Phase 2 preparation.</p>
+              <div className="badge badge-primary mb-4">Phase 3: 3.5 Years</div>
+              <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Clinical Trials</h3>
+              <p className="text-gray-700 mb-4">USD 4.5M for Phase I safety trials and Phase II immunogenicity studies (100-300 subjects) with data analysis.</p>
               <div className="text-sm text-gray-600">
-                <strong>Key Deliverables:</strong> Safety profile, preliminary immunogenicity data, dose selection for Phase 2
-              </div>
-            </div>
-            <div className="card">
-              <div className="badge badge-primary mb-4">Years 5-6</div>
-              <h3 className="text-xl font-semibold mb-3" style={{color: 'var(--vn-deep-indigo)'}}>Phase 2 Clinical</h3>
-              <p className="text-gray-700 mb-4">USD 3.9M for expanded immunogenicity trials, adjuvant optimization, and comprehensive data analysis.</p>
-              <div className="text-sm text-gray-600">
-                <strong>Key Deliverables:</strong> Proof-of-concept efficacy, Phase 3 design, regulatory submission package
+                <strong>Key Deliverables:</strong> Safety profile, immunogenicity data, Phase 3-ready package
               </div>
             </div>
           </div>
